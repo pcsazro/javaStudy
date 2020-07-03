@@ -1,0 +1,52 @@
+조건문문제2.java
+올해 초
+2월 27일
+최
+내가 항목 1개를 업로드했습니다.
+자바
+조건문문제2.java
+package 확인문제;
+
+import javax.swing.JOptionPane;
+
+public class 조건문문제2 {
+
+	public static void main(String[] args) {
+		int day = Integer.parseInt(JOptionPane.showInputDialog("오늘은 무슨 요일인가요?(1.월 2.화 3.수 4.목 5.금 6.토 7.일)"));
+		if (day == 1) {
+			JOptionPane.showMessageDialog(null, "힘들게 학원을 갑니다.");
+		} else if (day == 2) {
+			JOptionPane.showMessageDialog(null, "더 힘들게 학원을 갑니다.");			
+		} else if (day == 3) {
+			JOptionPane.showMessageDialog(null, "더더 힘들게 학원을 갑니다.");			
+		} else if (day == 4) {
+			JOptionPane.showMessageDialog(null, "더욱더 힘들게 학원을 갑니다.");			
+		} else if (day == 5) {
+			JOptionPane.showMessageDialog(null, "불금도 학원을 갑니다.");			
+		} else if (day == 6) {
+			JOptionPane.showMessageDialog(null, "집에서 쉽니다.");			
+		} else if (day == 7) {
+			JOptionPane.showMessageDialog(null, "집에서 쉬다가 학원갈 준비를 합니다.");			
+		}
+		int time = Integer.parseInt(JOptionPane.showInputDialog("지금은 몇시입니까?"));
+		if (time < 11 && time >= 0) {
+			JOptionPane.showMessageDialog(null, "굿모닝");
+		} else if (time >= 11 && time < 16){
+			JOptionPane.showMessageDialog(null, "굿애프터눈");
+		} else if (time >= 16 && time < 20){
+			JOptionPane.showMessageDialog(null, "굿이브닝");
+		} else {
+			JOptionPane.showMessageDialog(null, "굿나잇");
+		}
+		int width = Integer.parseInt(JOptionPane.showInputDialog("가로길이를 입력하세요."));
+		int lenth = Integer.parseInt(JOptionPane.showInputDialog("세로길이를 입력하세요."));
+		if (width*lenth > 50) {
+			JOptionPane.showMessageDialog(null, "너무 넓군요.");
+		} else if (width*lenth < 50) {
+			JOptionPane.showMessageDialog(null, "너무 좁군요.");
+		} else {
+			JOptionPane.showMessageDialog(null, "딱 좋군요.");
+		}
+	}
+
+}
