@@ -1,0 +1,25 @@
+package 변수;
+
+import javax.swing.JOptionPane;
+
+public class 윈도우 {
+
+	public static void main(String[] args) {
+		// 입력을 받을 때는 모든 타입이 String으로 처리된다.
+		// 변수 앞에 변수의 타입을 적어주어야 한다.
+		String name = JOptionPane.showInputDialog("이름을 입력");
+		String age = JOptionPane.showInputDialog("나이를 입력");
+		String blang = JOptionPane.showInputDialog("당신의 주요 프로그래머 언어는 무엇인가요?");
+		String nlang = JOptionPane.showInputDialog("당신의 다음 언어는 무엇인가요?");
+		// 당신의 주요 프로그래머 언어는 무엇인가요?
+		// 당신의 다음 언어는 무엇인가요?
+		System.out.println("당신의 이름은 " + name + "입니다.");
+		System.out.println("당신의 나이는 " + age + "세 입니다.");
+		System.out.println("주요 프로그래머 언어는 " + blang + "이군요.");
+		System.out.println("다음 언어는 " + nlang + "이군요.");
+ 
+		
+
+	}
+
+}
