@@ -1,0 +1,22 @@
+package 제어문;
+
+public class 조건문1 {
+
+	public static void main(String[] args) {
+		int num = 100;
+		
+		// 쓰기는 쉬우나 권장하지 않는다.
+		if (num >= 15) System.out.println("관람가."); 
+		else System.out.println("관람 불가.");
+		
+		// 아래 형식(if자동완성)으로 쓰면 수정이 쉽고 가독성이 좋다.
+		if (num >= 15) {
+			System.out.println("관람가."); 
+		}
+		else {
+			System.out.println("관람 불가.");
+		}
+		
+	}
+
+}
