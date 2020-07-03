@@ -1,0 +1,44 @@
+package 윈도우;
+
+import java.util.Date;
+import java.util.Random;
+import java.util.Scanner;
+// ↑원본
+public class 부품을써보자 {
+		// 부품 = jdk
+	public static void main(String[] args) {
+		// 날짜 시간 구하는 것
+		Date d1 = new Date();
+		int hour = d1.getHours(); // 너무 오래된 부품을 사용해서 가운데줄이 생김
+		System.out.print(hour + "시 ");
+		int min = d1.getMinutes(); // deprecated 중요도가 떨어져 더 이상 사용되지 않고 앞으로는 사라지게 될.
+		System.out.print(min + "분 ");
+		int sec = d1.getSeconds();
+		System.out.println(sec + "초 ");
+		int year = d1.getYear(); // 1900년 기준
+		System.out.println("올해는 " + (year + 1900) + "년");
+		int mon = d1.getMonth(); // 음력기준
+		System.out.println("이번 달은 " + (mon + 1) + "월");
+		int date = d1.getDate();
+		System.out.println("오늘은" + date + "일");
+		int day = d1.getDay(); // 0(일) ~ 6(토) 서양주일 기준
+		System.out.println("오늘은 " + day + "요일");
+		
+		// 랜덤
+		Random r = new Random(42); // 42는 seed값
+		int num = r.nextInt(46); // 0~45
+		System.out.println(num);
+		
+		// 콘솔에서 입력해서 자동으로 타입을 바꾸어주는 기능
+		Scanner sc = new Scanner(System.in); // 키보드로 콘솔에서 입력을 받겠다.
+		System.out.print("이름을 입력>> "); // 무엇을 입력받을지 알려주어야 한다.
+		String name = sc.next();
+		System.out.println("당신의 이름은" + name);
+		
+		System.out.print("나이를 입력>> ");
+		int age = sc.nextInt(); // String -> int로 변환
+		System.out.println("내년 나이는 " + (age + 1));
+		sc.close(); // 메모리 낭비를 막기 위해 막아준다.(권고사항)
+	}
+
+}
