@@ -1,0 +1,21 @@
+package 변수복습;
+
+import javax.swing.JOptionPane;
+
+public class 기본입출력1 {
+
+	public static void main(String[] args) {
+		// 당신이 좋아하는 음식은?
+		// 입력을 받을 때는 무조건 String으로 인식한다.
+		String food = JOptionPane.showInputDialog("당신이 좋아하는 음식은?");
+		// 당신이 좋아하는 음식은 짜장면이군요!
+		System.out.println("당신이 좋아하는 음식은 " + food + "이군요!");
+				
+		String age = JOptionPane.showInputDialog("나이를 입력?");
+		// String -> int 처리
+		int age2 = Integer.parseInt(age); // "100" -> 100
+		// 100(o), aaa(x)
+		System.out.println("내년의 나이는 " + (age2 + 1) + "세");
+	}
+
+}
