@@ -1,0 +1,27 @@
+package 변수;
+
+public class 기본형 {
+
+	public static void main(String[] args) {
+		// 기본형 데이터 - 해당 타입의 값이 들어가는 데이터
+		// 숫자 - 정수(int) / 실수(double)
+		// 문자(한글자) - char 
+		// 논리(bool) - boolean(true/false)
+		
+		// '선언' - 데이터타입 변수명 선언한 공간 하위에는 사용 가능하다.
+		// '할당' - 램 공간에 만들어진다. 
+		
+		int age = 100;  // 정수(-21억~21억) 4byte
+		double eye = 0.7;  // 실수(소수점16자리까지) 4byte
+		char gender = '남';  // 한글자 character는 ''이용 1byte
+		boolean food = true;  // 예약어(true,false등)는 이름으로 사용할 수 없다. 1byte
+		System.out.println("나의 나이는 " + age + "세");
+		System.out.println("나의 시력은 " + eye);
+		System.out.println("나의 성별은" + gender);
+		System.out.println("나는 점심을 먹었을까요? " + food);
+		
+		
+
+	}
+
+}
