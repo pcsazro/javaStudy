@@ -1,0 +1,22 @@
+package 연산자;
+
+import javax.swing.JOptionPane;
+
+public class 연산자등록2 {
+
+	public static void main(String[] args) {
+		// 총 가격을 입력 받으세요.
+		String tprice = JOptionPane.showInputDialog("총 가격");
+		int tprice2 = Integer.parseInt(tprice);
+		// int tprice2 = Integer.parseInt(JOptionPane.showInputDialog("총 가격"));
+		
+		// 총 인원수를 입력 받으세요.
+		String tcount = JOptionPane.showInputDialog("총 인원수");
+		int tcount2 = Integer.parseInt(tcount);
+		// int tcount2 = Integer.parseInt(JOptionPane.showInputDialog("총 인원수"));
+		// 한 명당 얼마씩 내야하는가?(소수점)
+		double dpay = tprice2 / (double)tcount2;
+		System.out.println("각 " + dpay + "원씩 내야합니다.");
+	}
+
+}
