@@ -1,0 +1,108 @@
+원도우문제1.java
+올해 초
+2월 27일
+최
+내가 항목 1개를 업로드했습니다.
+자바
+원도우문제1.java
+package 확인문제;
+
+import java.util.Date;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class 원도우문제1 {
+
+	public static void main(String[] args) {
+// 1번
+		System.out.println("------나의 현금 잔고------");
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.print("현재 당신이 가지고 있는 돈은? ");
+		int todaym = scan.nextInt();
+//		System.out.println(todaym);
+		
+		System.out.print("내일 당신이 가지게 될 돈은? ");
+		int tomorm = scan.nextInt();
+//		System.out.println(tomorm);
+		
+		System.out.println("내일 내가 가지게 될 돈의 총액은 " + (todaym + tomorm));
+		
+		System.out.println("----------다음문제-----------");
+
+// 2번
+		System.out.println("<<< 여행 정보 >>>");
+		Scanner scan1 = new Scanner(System.in);
+		System.out.println("---------------------");
+		
+		System.out.print("여행지 입력>> ");
+		String place = scan1.next();
+//		System.out.println(place);
+		
+		System.out.print("여행비 입력>> ");
+		int price = scan1.nextInt();
+//		System.out.println(price);
+		
+		System.out.print("할인율 입력>> ");
+		double discount = scan1.nextDouble();
+//		System.out.println(discount);
+		
+		double lastprice = price - (price*discount);
+		System.out.println((int)(lastprice)); //int값 변환시 (int)를 넣어준다.
+		System.out.println("---------------------");
+		
+		Date travel = new Date();
+		int month = travel.getMonth();
+		System.out.println("=> " + month + "월 중순에 갔을때 가격");
+
+		System.out.println("----------다음문제-----------");
+		
+// 3번
+		Scanner scan2 = new Scanner(System.in);
+		System.out.print("음식점 계산 총 금액 : ");
+		String totalm = scan2.next();
+		int totalm1 = Integer.parseInt(totalm);
+		double totalm2 = Double.parseDouble(totalm);
+//		System.out.println(totalm);
+		
+		System.out.print("함께 먹은 사람 인원수>> ");
+		int count = scan2.nextInt();
+//		System.out.println(count);
+		
+		System.out.println("-----------------------");
+		int dutch1 = totalm1 / count;
+		if ((totalm1 % count) == 0) {
+			System.out.println("각자 내야할 돈: " + dutch1);
+		} else {
+			System.out.println("각자 내야할 돈: " + dutch1);
+			System.out.println("남은 돈 " + (totalm1 % count) + "는  한명이 내시면 됩니다.");
+		}
+		System.out.println("----------다음문제-----------");
+		
+// 4번
+		Scanner scan3 = new Scanner(System.in);
+		System.out.print("커피값은? ");
+		int coffee = scan3.nextInt();
+//		System.out.println(coffee);
+
+		System.out.print("인원수는? ");
+		int count1 = scan3.nextInt();
+//		System.out.println(count1);
+		
+		Date time = new Date();
+		int hour = time.getHours();
+//		System.out.println(hour);
+		if (hour <= 22 || hour >= 6) {
+			System.out.println("커피값은 " + (coffee * count1) + "원 입니다.");
+		}
+		else {
+			System.out.println("커피값은 " + (coffee * count1 - 5000) + "원 입니다.");
+			System.out.println("저녁 10시 이후에는 5000원 할인입니다.");
+		}
+//		scan3.close();
+		
+	}	
+
+}
