@@ -1,0 +1,40 @@
+package 연산자;
+
+public class 연산자등록 {
+
+	public static void main(String[] args) {
+		// 연산자 종류 (마지막 연산은 대입이다.)
+		// 1. 대입 : =
+		// 2. 결합 : + (타입이 달라도 결합가능)
+		// 3. 사술 : + - *(에스테리크) /(슬러시) %(나머지)
+		// 4. 비교 : == !=(같지않다) >=(부등호먼저)
+		// 5. 논리 : 조건이 여러개인 경우 , &&(앤퍼센트, and연산자), ||(버티컬바, or연산자), !(not연산자)
+		
+		// **int(정수)와 int의 계산은 무조건 int!**
+		int sum = 44;
+		int count = 3;
+		int avg = sum / count; 
+		System.out.println(avg);
+		
+		// 계산되는 데이터 중 하나라도 실수가 있으면 무조건 실수!!!
+		int sum2 = 47;
+		double count2 = 7;
+		double avg2 = sum2 / count2; // 계산안에 실수가 있으므로 결과도 실수!
+		System.out.println(avg2);
+		
+		// 계산은 오른쪽에서 실행한 후 대입
+		int sum3 = 47;
+		int count3 = 7;
+		double avg3 = sum3 / count3; // 답이 6.00000...으로 계산이 된 후 대입
+		System.out.println(avg3);
+		System.out.println(sum3 / count3);
+		
+		// 맞게 하고 싶다면
+		int sum4 = 47;
+		int count4 = 7;
+		double avg4 = sum4 / (double)count4;
+		System.out.println(avg4);
+		// 이후에 사용되는 count4는 정수
+	}
+
+}
