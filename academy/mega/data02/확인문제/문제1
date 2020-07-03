@@ -1,0 +1,26 @@
+문제1.java
+올해 초
+2월 27일
+최
+내가 항목 1개를 업로드했습니다.
+자바
+문제1.java
+package 확인문제;
+
+public class 문제1 {
+
+	public static void main(String[] args) {
+		int money = 20000;
+		double weigh = 33.3;
+		char score = 'B';
+		boolean bus = false;
+		String metro = "초록색";
+		
+		System.out.println("내 지갑에 들어있는 돈 : " + money + "원");
+		System.out.println("내 몸무게" + weigh + "kg");
+		System.out.println("내 컴퓨터 성적 : " + score + "학점");
+		System.out.println("나는 버스를 타고 왔나요? " + bus);
+		System.out.println("내가 타고온 지하철 색은 : " + metro);
+	}
+
+}
