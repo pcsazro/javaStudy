@@ -1,0 +1,57 @@
+조건문문제1.java
+올해 초
+2월 27일
+최
+내가 항목 1개를 업로드했습니다.
+자바
+조건문문제1.java
+package 확인문제;
+
+import javax.swing.JOptionPane;
+
+public class 조건문문제1 {
+
+	public static void main(String[] args) {
+		// 변수가 int값이므로 비교 연산자 사용가능 / String이면  비교 연산자 활용 불가능하다.
+		
+		// 1번문제
+		int id = 1111;
+		int pw = 2222;
+		
+		if (id == 1111 && pw == 2222) {
+			System.out.println("로그인ok");
+		} else {
+			System.out.println("로그인not");
+		}
+		
+		// 2번 문제
+		int id1 = Integer.parseInt(JOptionPane.showInputDialog("아이디 입력: "));
+		int pw1 = Integer.parseInt(JOptionPane.showInputDialog("비밀번호 입력: "));
+		
+		if (id1 == 3333 && pw1 == 4444) {
+			System.out.println("로그인ok");
+		} else {
+			System.out.println("로그인not");
+		}
+		
+		// 3번 문제
+		int choice = Integer.parseInt(JOptionPane.showInputDialog("요일 선택(1.주중, 2.주말): "));
+		if (choice == 1) {
+			System.out.println("열심히 공부합시다.");
+		} else if (choice == 2) {
+			System.out.println("열심히 놀아봅시다.");
+		}
+		
+		// 4번 문제
+		int weather = Integer.parseInt(JOptionPane.showInputDialog("오늘의 날씨는(1.비 2.흐림 3.눈 4.화창): "));
+		if (weather == 1 || weather == 3) {
+			// null은 참조형 변수에만 사용가능
+			JOptionPane.showMessageDialog(null, "지하철을 타고 간다.");
+		} else if (weather == 2) {
+			JOptionPane.showMessageDialog(null, "버스를 타고 간다.");
+		} else {
+			JOptionPane.showMessageDialog(null, "자전거를 타고 간다.");
+		}
+	}
+
+}
