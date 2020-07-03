@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.mega.living.noticeDTO" alias="noticeDTO"></typeAlias>
+		<typeAlias type="com.mega.living.testDTO" alias="testDTO"></typeAlias>
+		<!-- <typeAlias type="com.mega.mvc07.ReplyDTO" alias="replyDTO"></typeAlias>
+		<typeAlias type="com.mega.mvc07.EvalDTO" alias="evalDTO"></typeAlias> -->
+	</typeAliases>
+	<mappers>
+		<mapper resource="mapper/noticeMapper.xml" />
+		<mapper resource="mapper/testMapper.xml" />
+		<!-- <mapper resource="mapper/productMapper.xml" />
+		<mapper resource="mapper/replyMapper.xml" />
+		<mapper resource="mapper/evalMapper.xml" /> -->
+	</mappers>
+</configuration>
