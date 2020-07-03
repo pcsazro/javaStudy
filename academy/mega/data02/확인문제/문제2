@@ -1,0 +1,63 @@
+문제2.java
+올해 초
+2월 27일
+최
+내가 항목 1개를 업로드했습니다.
+자바
+문제2.java
+package 확인문제;
+
+import javax.swing.JOptionPane;
+
+public class 문제2 {
+
+	public static void main(String[] args) {
+		// 입력 시작
+		String mname = JOptionPane.showInputDialog("당신이 좋아하는 영화제목은?");
+		String mpeople = JOptionPane.showInputDialog("영화의 출연자는?");
+		String mgrade = JOptionPane.showInputDialog("영화의 등급은?"); // int
+		String mscore = JOptionPane.showInputDialog("영화의 평점은?"); // double
+		String myear = JOptionPane.showInputDialog("영화의 발표년도는?"); // int
+		String msee = JOptionPane.showInputDialog("당신은 이 영화를 보셨나요?"); // boolean
+		String yage = JOptionPane.showInputDialog("당신의 나이는?"); // int
+		// 입력 받음
+		
+		int mgrade2 = Integer.parseInt(mgrade);
+		double mscore2 = Double.parseDouble(mscore);
+		int myear2 = Integer.parseInt(myear);
+		boolean msee2 = Boolean.parseBoolean(msee);
+		int yage2 = Integer.parseInt(yage);
+		// 사용할 변수들을 사용가능한 변수로 변환
+		
+		System.out.println("영화 제목: " + mname);
+		System.out.println("출연자: " + mpeople);
+		System.out.println("등급: " + (mgrade2) + "세");
+		if (mgrade2 < yage2) { // 나이가 등급보다 높을 경우
+			System.out.println("당신은 영화를 볼 수 있는 나이입니다.");
+		}else {				   // 나이가 등급보다 낮을 경우
+			System.out.println("당신은 영화를 볼 수 없는 나이입니다.");
+		}
+		System.out.println("평점: " + mscore2);
+		if (mscore2 > 5.5) {			// 평점이 평균보다 높을 경우
+			System.out.println("(고)");
+			System.out.println("다른 영화의 평균 평점은 5.5입니다.");
+		}
+		else if (mscore2 == 5.5) {		// 평점이 평균일 경우
+			System.out.println("(중)");
+			System.out.println("다른 영화의 평균 평점은 5.5입니다.");
+		}
+		else {
+			System.out.println("(저)"); // 평점이 평균보다 낮을 경우
+			System.out.println("다른 영화의 평균 평점은 5.5입니다.");
+		}
+		System.out.println("상영기간: " + myear2 + "부터" + (myear2+1) +"(현재)까지");
+		// 상영기간을 시작년도 부터 1년 지난 현재까지
+		System.out.println("영화를 본 후: ");
+		if (msee2 == true) { // 영화를 보았을때
+			System.out.println("후기 작성");
+		}else {				 // 영화를 안보았을때
+			System.out.println("극장예매");
+		}
+	}
+
+}
